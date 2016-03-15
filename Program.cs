@@ -10,12 +10,17 @@ namespace BusinessLayer {
     {
         static void Main(string[] args)
         {
+            //First Test Code
             IBusinessLayer businessLayer = new BusinessLayer();
             IList<Standard> allStandard = businessLayer.getAllStandards();
             foreach (Standard standard in allStandard)
             {
                Console.WriteLine(string.Format("{0} - {1}", standard.StandardId, standard.StandardName));
             }
+
+            //Menu
+
+
          }
     }
 }
