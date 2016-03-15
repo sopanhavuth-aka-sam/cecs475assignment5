@@ -44,7 +44,7 @@ namespace DataAccessLayer {
       //add body code from example
       public IList<T> GetAll (params Expression<Func<T, object>>[] navigationProperties) { //add param from example code
 
-         context.Database.Connection.Open();
+         //context.Database.Connection.Open();
          List<T> list;
          //using (var context = new SchoolDBEntities())
          //{

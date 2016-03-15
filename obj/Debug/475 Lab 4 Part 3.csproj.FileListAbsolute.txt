@@ -29,3 +29,12 @@ C:\Users\sam-sopanha\Downloads\475 Lab 4 Part 3\bin\Debug\475 Lab 4 Part 3.exe
 C:\Users\sam-sopanha\Downloads\475 Lab 4 Part 3\bin\Debug\475 Lab 4 Part 3.pdb
 C:\Users\sam-sopanha\Downloads\475 Lab 4 Part 3\obj\Debug\475 Lab 4 Part 3.exe
 C:\Users\sam-sopanha\Downloads\475 Lab 4 Part 3\obj\Debug\475 Lab 4 Part 3.pdb
+C:\Users\sam-sopanha\Downloads\475 Lab 4 Part 3\obj\Debug\475 Lab 4 Part 3.csprojResolveAssemblyReference.cache
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\475 Lab 4 Part 3.exe.config
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\obj\Debug\475 Lab 4 Part 3.exe
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\obj\Debug\475 Lab 4 Part 3.pdb
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\SchoolDB.mdf
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\SchoolDB_log.ldf
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\475 Lab 4 Part 3.exe
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\475 Lab 4 Part 3.pdb
+C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\obj\Debug\475 Lab 4 Part 3.csprojResolveAssemblyReference.cache
