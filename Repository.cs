@@ -13,25 +13,31 @@ namespace DataAccessLayer {
       protected DbContext context;
       protected DbSet<T> dbSet;
 
+      //constructor
       public Repository (DbContext datacontext) {
          context = datacontext;
          dbSet = datacontext.Set<T>();
       }
 
+      //insert new entity into the db
       public void Insert (T entity) {
          context.Entry(entity).State = System.Data.Entity.EntityState.Added;
          context.SaveChanges();
       }
 
+      //delete entity from the db
       public void Delete (T entity) {
          context.Entry(entity).State = System.Data.Entity.EntityState.Deleted;
          context.SaveChanges();
       }
 
+      //find and update information of the entity
       public void Update (T entity) {
          context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
          context.SaveChanges();
       }
+
+      //find and entity by id
       public T GetById (int id) {
          return dbSet.Find(id);
       }
@@ -41,32 +47,29 @@ namespace DataAccessLayer {
          return context.Set<T>().Where(predicate);
       }
 
-      //add body code from example
+      //Get all entity from a db
       public IList<T> GetAll (params Expression<Func<T, object>>[] navigationProperties) { //add param from example code
 
-         //context.Database.Connection.Open();
          List<T> list;
-         //using (var context = new SchoolDBEntities())
-         //{
-            IQueryable<T> dbQuery = context.Set<T>();
+         IQueryable<T> dbQuery = context.Set<T>();
 
-            //Apply eager loading
-            foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
-               dbQuery = dbQuery.Include<T, object>(navigationProperty);
+         //Apply eager loading
+         foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
+            dbQuery = dbQuery.Include<T, object>(navigationProperty);
 
-            list = dbQuery
-                  .AsNoTracking()
-                  .ToList<T>();
-         //}
+         list = dbQuery
+               .AsNoTracking()
+               .ToList<T>();
+
          return list;
       }
 
 
       public void Dispose () {
-         //how to implement this??
+         //Empty
       }
 
-      //add body code from example
+      //Get a single entity
       public T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties)
       {
          T item = null;
