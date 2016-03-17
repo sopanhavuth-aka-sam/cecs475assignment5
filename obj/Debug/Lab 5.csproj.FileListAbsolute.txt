@@ -1,3 +1,8 @@
 C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\bin\Debug\475 Lab 4 Part 3.exe.config
 C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\obj\Debug\475 Lab 4 Part 3.exe
 C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\obj\Debug\475 Lab 4 Part 3.pdb
+C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\bin\Debug\SchoolDB.mdf
+C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\bin\Debug\SchoolDB_log.ldf
+C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\bin\Debug\475 Lab 4 Part 3.exe
+C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\bin\Debug\475 Lab 4 Part 3.pdb
+C:\Users\Cmonte\Desktop\CECS 475\Assignments\475 Lab 4 Part 3\obj\Debug\Lab 5.csprojResolveAssemblyReference.cache

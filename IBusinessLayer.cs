@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using _475_Lab_4_Part_3;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -11,15 +13,15 @@ namespace BusinessLayer {
 
       IList<Standard> getAllStandards ();
       Standard GetStandardByID (int id);
-      void addStandard (Standard);
-      void updateStandard (Standard)
-      void removeStandard (Standard);
+      void addStandard (Standard s);
+      void updateStandard(Standard s);
+      void removeStandard (Standard s);
 
       IList<Student> getAllStudents ();
       Student GetStudentByID (int id);
-      void addStudent (Student);
-      void UpdateStudent (Student);
-      void RemoveStudent (Student);
+      void addStudent (Student st);
+      void UpdateStudent (Student st);
+      void RemoveStudent (Student st);
 
    }
 }
