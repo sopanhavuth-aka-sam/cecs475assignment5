@@ -8,12 +8,6 @@ using System.Threading.Tasks;
 
 namespace DataAcessLayer {
    public interface IStudentRepository : IRepository<Student> {
-<<<<<<< HEAD
-
-      
-
-=======
->>>>>>> samcopy
    }
 
 }

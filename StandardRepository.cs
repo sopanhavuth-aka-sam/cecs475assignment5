@@ -12,33 +12,6 @@ namespace DataAcessLayer {
       public StandardRepository () : base(new SchoolDBEntities()) {
 
       }
-<<<<<<< HEAD
-
-      //public void Delete (Standard entity) {
-      //   throw new NotImplementedException();
-      //}
-
-      //public void Insert (Standard entity) {
-      //   throw new NotImplementedException();
-      //}
-
-      //public IQueryable<Standard> SearchFor (System.Linq.Expressions.Expression<Func<Standard, bool>> predicate) {
-      //   throw new NotImplementedException();
-      //}
-
-      //public void Update (Standard entity) {
-      //   throw new NotImplementedException();
-      //}
-
-      //IEnumerable<Standard> IRepository<Standard>.GetAll () {
-      //   throw new NotImplementedException();
-      //}
-
-      //Standard IRepository<Standard>.GetById (int id) {
-      //   throw new NotImplementedException();
-      //}
-=======
->>>>>>> samcopy
    }
 
 }

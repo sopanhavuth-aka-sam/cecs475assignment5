@@ -13,19 +13,13 @@ namespace DataAccessLayer {
       protected DbContext context;
       protected DbSet<T> dbSet;
 
-<<<<<<< HEAD
-=======
       //constructor
->>>>>>> samcopy
       public Repository (DbContext datacontext) {
          context = datacontext;
          dbSet = datacontext.Set<T>();
       }
 
-<<<<<<< HEAD
-=======
       //insert new entity into the db
->>>>>>> samcopy
       public void Insert (T entity) {
          context.Entry(entity).State = System.Data.Entity.EntityState.Added;
          context.SaveChanges();
@@ -42,11 +36,8 @@ namespace DataAccessLayer {
          context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
          context.SaveChanges();
       }
-<<<<<<< HEAD
-=======
 
       //find and entity by id
->>>>>>> samcopy
       public T GetById (int id) {
          return dbSet.Find(id);
       }
@@ -56,20 +47,6 @@ namespace DataAccessLayer {
          return context.Set<T>().Where(predicate);
       }
 
-<<<<<<< HEAD
-      //add body code from example
-      public IList<T> GetAll (params Expression<Func<T, object>>[] navigationProperties) { //add param from example code
-
-         //context.Database.Connection.Open();
-         List<T> list;
-         //using (var context = new SchoolDBEntities())
-         //{
-            IQueryable<T> dbQuery = context.Set<T>();
-
-            //Apply eager loading
-            foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
-               dbQuery = dbQuery.Include<T, object>(navigationProperty);
-=======
       //Get all entity from a db
       public IList<T> GetAll (params Expression<Func<T, object>>[] navigationProperties) { //add param from example code
 
@@ -86,27 +63,11 @@ namespace DataAccessLayer {
 
          return list;
       }
->>>>>>> samcopy
 
-            list = dbQuery
-                  .AsNoTracking()
-                  .ToList<T>();
-         //}
-         return list;
-      }
 
-      public void Dispose () {
-<<<<<<< HEAD
-         //how to implement this??
-      }
-
-      //add body code from example
-=======
-         //Empty
-      }
-
+      public void Dispose() { }
+     
       //Get a single entity
->>>>>>> samcopy
       public T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties)
       {
          T item = null;

@@ -20,24 +20,13 @@ namespace BusinessLayer {
          _studentRepository = new StudentRepository();
       }
 
-<<<<<<< HEAD
-      //public BusinessLayer(StandardRepository standardRepo, StudentRepository studentRepo)
-      //{
-      //   _standardRepository = standardRepo;
-      //   _studentRepository = studentRepo;
-      //}
-
-=======
       //add standard to db
->>>>>>> samcopy
       public void addStandard (Standard standard) {
          _standardRepository.Insert(standard);
       }
 
-<<<<<<< HEAD
-=======
+
       //add student to db
->>>>>>> samcopy
       public void addStudent (Student student) {
          _studentRepository.Insert(student);
       }
@@ -62,40 +51,26 @@ namespace BusinessLayer {
          return _studentRepository.GetById(id);
       }
 
-<<<<<<< HEAD
-=======
       //remove standard from db
->>>>>>> samcopy
       public void removeStandard (Standard standard) {
          _standardRepository.Delete(standard);
       }
 
-<<<<<<< HEAD
-=======
       //remove student from db
->>>>>>> samcopy
       public void RemoveStudent (Student student) {
          _studentRepository.Delete(student);
       }
 
-<<<<<<< HEAD
-=======
       //update standard in db
->>>>>>> samcopy
       public void updateStandard (Standard standard) {
          _standardRepository.Update(standard);
       }
 
-<<<<<<< HEAD
-=======
       //update student in db
->>>>>>> samcopy
       public void UpdateStudent (Student student) {
          _studentRepository.Update(student);
       }
 
-<<<<<<< HEAD
-=======
       //get student base on String(name)
       public Student GetStudentByName(String name)
       {
@@ -107,6 +82,5 @@ namespace BusinessLayer {
       {
          return _standardRepository.GetSingle(d => d.StandardName.Equals(name));
       }
->>>>>>> samcopy
    }
 }
