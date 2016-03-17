@@ -18,7 +18,7 @@ namespace BusinessLayer {
             System.Console.WriteLine("2 Update Standard by ID");
             System.Console.WriteLine("3 Update Standard by Name ");
             System.Console.WriteLine("4 Delete Standard ");
-            System.Console.WriteLine("5 Delete Standard ");
+            System.Console.WriteLine("5 Display students with same Standard ID ");
             System.Console.WriteLine("6 Display All Standards");
             System.Console.WriteLine("7 Create Student ");
             System.Console.WriteLine("8 Update Student by ID");
@@ -65,7 +65,7 @@ namespace BusinessLayer {
 
                   //businessLayer.removeStandard(businessLayer.GetStandardByName(updateStandardname));
                   //businessLayer.addStandard(updateStandardbyName);
-                  businessLayer.updateStandard(updateStandardbyName); // Not updating
+                  businessLayer.updateStandard(updateStandardbyName); // Not updating 
 
                   break;
                case 4:
@@ -79,6 +79,14 @@ namespace BusinessLayer {
                   // Input the standard id and then display all students that has that standard id.
                   System.Console.WriteLine("Please enter a Standard ID ");
                   int standStudID = Convert.ToInt32(Console.ReadLine());
+
+                  IList<Student> allStudentStandID = businessLayer.getAllStudents();
+                  foreach (Student students in allStudentStandID) {
+                     if (students.StandardId == standStudID) {
+                        Console.WriteLine(string.Format("{0} - {1} - {2}", students.StudentID, students.StudentName, students.StandardId));
+                     }
+                     
+                  }
 
 
                   break;
@@ -106,7 +114,7 @@ namespace BusinessLayer {
                   Student updateStudentbyID = businessLayer.GetStudentByID(studUpdateID); //temp student object
                   Console.WriteLine("Enter updated ID");
                   int updatedStudID = Convert.ToInt32(Console.ReadLine());
-                  updateStudentbyID.StandardId = updatedStudID; // Updates the temp student objecct
+                  updateStudentbyID.StudentID = updatedStudID; // Updates the temp student objecct
                   businessLayer.UpdateStudent(updateStudentbyID);
 
                   break;
@@ -145,4 +153,3 @@ namespace BusinessLayer {
       }
    }
 }
-s
