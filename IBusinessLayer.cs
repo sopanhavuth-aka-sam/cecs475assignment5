@@ -13,11 +13,20 @@ namespace BusinessLayer {
 
       IList<Standard> getAllStandards ();
       Standard GetStandardByID (int id);
+<<<<<<< HEAD
+      void addStandard (Standard s);
+      void updateStandard(Standard s);
+      void removeStandard (Standard s);
+=======
+      Standard GetStandardByName(String name);
       void addStandard (Standard s);
       void updateStandard(Standard s);
       void removeStandard (Standard s);
 
+>>>>>>> samcopy
+
       IList<Student> getAllStudents ();
+      Student GetStudentByName(String name);
       Student GetStudentByID (int id);
       void addStudent (Student st);
       void UpdateStudent (Student st);

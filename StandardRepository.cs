@@ -12,6 +12,7 @@ namespace DataAcessLayer {
       public StandardRepository () : base(new SchoolDBEntities()) {
 
       }
+<<<<<<< HEAD
 
       //public void Delete (Standard entity) {
       //   throw new NotImplementedException();
@@ -36,6 +37,8 @@ namespace DataAcessLayer {
       //Standard IRepository<Standard>.GetById (int id) {
       //   throw new NotImplementedException();
       //}
+=======
+>>>>>>> samcopy
    }
 
 }

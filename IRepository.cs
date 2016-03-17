@@ -17,12 +17,19 @@ namespace DataAccessLayer {
 
       //Should I change IQueryable and IEnumerable to IList??
       //IList make the system do LINQ inside of the repo object
+<<<<<<< HEAD
+=======
+      //This is probably is used as a delegate for searching by id or by name
+>>>>>>> samcopy
       IQueryable<T> SearchFor (Expression<Func<T, bool>> predicate);
 
       IList<T> GetAll (params Expression<Func<T, object>>[] navigationPropertie);
 
+<<<<<<< HEAD
       //new code added by Prof
       //What does it do?
+=======
+>>>>>>> samcopy
       T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties);
 
    }

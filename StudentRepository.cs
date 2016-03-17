@@ -14,6 +14,7 @@ namespace DataAcessLayer
       public StudentRepository() : base(new SchoolDBEntities())
       {
       }
+<<<<<<< HEAD
 
       public T GetByStudentName (int id) {
          return dbSet.Find(id);
@@ -48,5 +49,7 @@ namespace DataAcessLayer
       //{
       //   throw new NotImplementedException();
       //}
+=======
+>>>>>>> samcopy
    }
 }

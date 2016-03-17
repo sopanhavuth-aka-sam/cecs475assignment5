@@ -38,6 +38,7 @@ C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\SchoolDB_log.
 C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\475 Lab 4 Part 3.exe
 C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\bin\Debug\475 Lab 4 Part 3.pdb
 C:\Users\sam-sopanha\Documents\GitHub\cecs475assignment5\obj\Debug\475 Lab 4 Part 3.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Cmonte\Downloads\cecs475assignment5-samcopy\cecs475assignment5-samcopy\bin\Debug\475 Lab 4 Part 3.exe.config
 C:\Users\Cmonte\Downloads\cecs475assignment5-samcopy\cecs475assignment5-samcopy\obj\Debug\475 Lab 4 Part 3.exe
 C:\Users\Cmonte\Downloads\cecs475assignment5-samcopy\cecs475assignment5-samcopy\obj\Debug\475 Lab 4 Part 3.pdb
@@ -49,3 +50,5 @@ C:\Users\Cmonte\Downloads\cecs475assignment5-samcopy\cecs475assignment5-samcopy\
 C:\Users\Cmonte\Desktop\cecs475assignment5-samcopy\cecs475assignment5-samcopy\bin\Debug\475 Lab 4 Part 3.exe.config
 C:\Users\Cmonte\Desktop\cecs475assignment5-samcopy\cecs475assignment5-samcopy\obj\Debug\475 Lab 4 Part 3.exe
 C:\Users\Cmonte\Desktop\cecs475assignment5-samcopy\cecs475assignment5-samcopy\obj\Debug\475 Lab 4 Part 3.pdb
+=======
+>>>>>>> samcopy
