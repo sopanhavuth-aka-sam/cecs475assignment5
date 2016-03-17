@@ -1,4 +1,4 @@
-﻿using _475_Lab_4_Part_3;
+using _475_Lab_4_Part_3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +12,21 @@ namespace BusinessLayer {
          IBusinessLayer businessLayer = new BusinessLayer();
 
          bool menu = true;
-         
+
          while (menu) {
             System.Console.WriteLine("1 Create Standard ");
             System.Console.WriteLine("2 Update Standard by ID");
             System.Console.WriteLine("3 Update Standard by Name ");
             System.Console.WriteLine("4 Delete Standard ");
-            System.Console.WriteLine("5 Display All Standards");
-            System.Console.WriteLine("6 Create Student ");
-            System.Console.WriteLine("7 Update Student by ID");
-            System.Console.WriteLine("8 Update Student by Name");
-            System.Console.WriteLine("9 Delete Student");
-            System.Console.WriteLine("10 Display All Studnents ");
-            System.Console.WriteLine("11 Exit");
+            System.Console.WriteLine("5 Delete Standard ");
+            System.Console.WriteLine("6 Display All Standards");
+            System.Console.WriteLine("7 Create Student ");
+            System.Console.WriteLine("8 Update Student by ID");
+            System.Console.WriteLine("9 Update Student by Name");
+            System.Console.WriteLine("10 Delete Student");
+            System.Console.WriteLine("11 Display All Studnents ");
+            System.Console.WriteLine("12 Exit");
             int input = Convert.ToInt32(Console.ReadLine());
-            
             switch (input) {
                case 1:
 
@@ -42,37 +42,54 @@ namespace BusinessLayer {
                case 2:
                   //Update Standard by ID
 
-                  Console.WriteLine("Which Name would you like to update?");
+                  Console.WriteLine("Which ID would you like to update?");
                   int standUpdateID = Convert.ToInt32(Console.ReadLine());
                   Standard updateStandardbyID = businessLayer.GetStandardByID(standUpdateID);
+                  //Console.WriteLine("Stand name : {0} Stand ID : {1}", updateStandardbyID.StandardName, updateStandardbyID.StandardId );
                   Console.WriteLine("Enter updated ID");
-                  int updatedStandardID = Convert.ToInt32(Console.ReadLine());
-                  updateStandardbyID.StandardId = updatedStandardID;
-                  businessLayer.updateStandard(updateStandardbyID);
+                  updateStandardbyID.StandardId = Convert.ToInt32(Console.ReadLine());
+
+                  //Work around, hard coded update(Remove and then add in the new object with modified object)
+                  //businessLayer.removeStandard(businessLayer.GetStandardByID(standUpdateID));
+                  //businessLayer.addStandard(updateStandardbyID);
+                  businessLayer.updateStandard(updateStandardbyID); // Not working for some reason
 
                   break;
                case 3:
                   //Update Standard by Name
                   Console.WriteLine("Which Name would you like to update?");
+                  string updateStandardname = Console.ReadLine();
+                  Standard updateStandardbyName = businessLayer.GetStandardByName(updateStandardname);
+                  Console.WriteLine("Enter new Standard Name");
+                  updateStandardbyName.StandardName = Console.ReadLine();
 
-                  businessLayer.updateStandard();
+                  //businessLayer.removeStandard(businessLayer.GetStandardByName(updateStandardname));
+                  //businessLayer.addStandard(updateStandardbyName);
+                  businessLayer.updateStandard(updateStandardbyName); // Not updating
 
                   break;
                case 4:
                   //Delete standard
                   Console.WriteLine("Enter Standard ID to delete");
-                  int removeStandID = Convert.ToInt32(Console.ReadLine());               
+                  int removeStandID = Convert.ToInt32(Console.ReadLine());
                   businessLayer.removeStandard(businessLayer.GetStandardByID(removeStandID));
 
                   break;
                case 5:
+                  // Input the standard id and then display all students that has that standard id.
+                  System.Console.WriteLine("Please enter a Standard ID ");
+                  int standStudID = Convert.ToInt32(Console.ReadLine());
+
+
+                  break;
+               case 6:
                   IList<Standard> allStandard = businessLayer.getAllStandards();
                   foreach (Standard standard in allStandard) {
                      Console.WriteLine(string.Format("{0} - {1}", standard.StandardId, standard.StandardName));
                   }
                   Console.Write("\n");
                   break;
-               case 6:
+               case 7:
                   Console.WriteLine("Enter the student name: ");
                   string sName = Console.ReadLine();
                   Console.WriteLine("Enter the student ID: ");
@@ -82,7 +99,7 @@ namespace BusinessLayer {
                   nStudent.StandardId = sID;
                   businessLayer.addStudent(nStudent);
                   break;
-               case 7:
+               case 8:
                   //Update by Student ID
                   Console.WriteLine("Which ID would you like to update?");
                   int studUpdateID = Convert.ToInt32(Console.ReadLine());
@@ -93,12 +110,16 @@ namespace BusinessLayer {
                   businessLayer.UpdateStudent(updateStudentbyID);
 
                   break;
-               case 8:
+               case 9:
                   //update by Student Name
-
+                  Console.WriteLine("Which Name would you like to update?");
+                  Student updateStudentbyName = businessLayer.GetStudentByName(Console.ReadLine());
+                  Console.WriteLine("Enter new Student Name");
+                  updateStudentbyName.StudentName = Console.ReadLine();
+                  businessLayer.UpdateStudent(updateStudentbyName);
 
                   break;
-               case 9:
+               case 10:
                   IList<Student> allStudentIDs = businessLayer.getAllStudents();
                   foreach (Student students in allStudentIDs) {
                      Console.WriteLine(string.Format("{0} - {1} - {2}", students.StudentID, students.StudentName));
@@ -109,14 +130,14 @@ namespace BusinessLayer {
                   businessLayer.removeStandard(businessLayer.GetStandardByID(removeStudID));
 
                   break;
-               case 10:
+               case 11:
                   IList<Student> allStudent = businessLayer.getAllStudents();
                   foreach (Student students in allStudent) {
                      Console.WriteLine(string.Format("{0} - {1} - {2}", students.StudentID, students.StudentName, students.StandardId));
                   }
                   Console.Write("\n");
                   break;
-               case 11:
+               case 12:
                   menu = false;
                   break;
             }
@@ -124,5 +145,4 @@ namespace BusinessLayer {
       }
    }
 }
-
-
+s
