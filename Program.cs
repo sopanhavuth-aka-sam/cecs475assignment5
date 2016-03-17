@@ -10,9 +10,7 @@ namespace BusinessLayer {
       static void Main (string[] args) {
          //Initailize business layer for the program
          IBusinessLayer businessLayer = new BusinessLayer();
-
          bool menu = true;
-
          while (menu) {
             System.Console.WriteLine("1 Create Standard ");
             System.Console.WriteLine("2 Update Standard by ID");
@@ -45,9 +43,10 @@ namespace BusinessLayer {
                   Console.WriteLine("Which ID would you like to update?");
                   int standUpdateID = Convert.ToInt32(Console.ReadLine());
                   Standard updateStandardbyID = businessLayer.GetStandardByID(standUpdateID);
-                  //Console.WriteLine("Stand name : {0} Stand ID : {1}", updateStandardbyID.StandardName, updateStandardbyID.StandardId );
-                  Console.WriteLine("Enter updated ID");
-                  updateStandardbyID.StandardId = Convert.ToInt32(Console.ReadLine());
+                  Console.WriteLine("Enter new Standard Name");
+                  updateStandardbyID.StandardName = Console.ReadLine();
+
+
 
                   //Work around, hard coded update(Remove and then add in the new object with modified object)
                   //businessLayer.removeStandard(businessLayer.GetStandardByID(standUpdateID));
@@ -87,8 +86,6 @@ namespace BusinessLayer {
                      }
                      
                   }
-
-
                   break;
                case 6:
                   IList<Standard> allStandard = businessLayer.getAllStandards();
@@ -105,6 +102,7 @@ namespace BusinessLayer {
                   Student nStudent = new Student();
                   nStudent.StudentName = sName;
                   nStudent.StandardId = sID;
+
                   businessLayer.addStudent(nStudent);
                   break;
                case 8:
@@ -112,9 +110,9 @@ namespace BusinessLayer {
                   Console.WriteLine("Which ID would you like to update?");
                   int studUpdateID = Convert.ToInt32(Console.ReadLine());
                   Student updateStudentbyID = businessLayer.GetStudentByID(studUpdateID); //temp student object
-                  Console.WriteLine("Enter updated ID");
-                  int updatedStudID = Convert.ToInt32(Console.ReadLine());
-                  updateStudentbyID.StudentID = updatedStudID; // Updates the temp student objecct
+                  Console.WriteLine("Enter new Student Name");
+                  updateStudentbyID.StudentName = Console.ReadLine();
+
                   businessLayer.UpdateStudent(updateStudentbyID);
 
                   break;
@@ -124,6 +122,7 @@ namespace BusinessLayer {
                   Student updateStudentbyName = businessLayer.GetStudentByName(Console.ReadLine());
                   Console.WriteLine("Enter new Student Name");
                   updateStudentbyName.StudentName = Console.ReadLine();
+
                   businessLayer.UpdateStudent(updateStudentbyName);
 
                   break;
